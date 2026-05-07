@@ -1,0 +1,48 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!config/.env.example
+config/.env
+config/.env.*
+
+# Generated pipeline data and bulky exports
+data/raw/
+data/processed/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs and runtime output
+logs/
+*.log
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Airflow and local scheduler state
+airflow.db
+airflow.cfg
+webserver_config.py
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
