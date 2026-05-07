@@ -282,6 +282,46 @@ CREATE TABLE IF NOT EXISTS audit.data_lineage (
     data_hash               VARCHAR(64)
 );
 
+CREATE TABLE IF NOT EXISTS raw.raw_mdall_licence (
+    raw_licence_key         BIGSERIAL PRIMARY KEY,
+    source_record_id        VARCHAR(200) NOT NULL,
+    source_system           VARCHAR(50) NOT NULL DEFAULT 'MDALL',
+    payload                 JSONB NOT NULL,
+    extracted_at            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    loaded_at               TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uk_raw_mdall_licence UNIQUE (source_system, source_record_id)
+);
+
+CREATE TABLE IF NOT EXISTS raw.raw_mdall_company (
+    raw_company_key         BIGSERIAL PRIMARY KEY,
+    source_record_id        VARCHAR(200) NOT NULL,
+    source_system           VARCHAR(50) NOT NULL DEFAULT 'MDALL',
+    payload                 JSONB NOT NULL,
+    extracted_at            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    loaded_at               TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uk_raw_mdall_company UNIQUE (source_system, source_record_id)
+);
+
+CREATE TABLE IF NOT EXISTS raw.raw_recall_listing (
+    raw_recall_key          BIGSERIAL PRIMARY KEY,
+    source_record_id        VARCHAR(200) NOT NULL,
+    source_system           VARCHAR(50) NOT NULL DEFAULT 'HC_RECALLS',
+    payload                 JSONB NOT NULL,
+    extracted_at            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    loaded_at               TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uk_raw_recall_listing UNIQUE (source_system, source_record_id)
+);
+
+CREATE TABLE IF NOT EXISTS raw.raw_canada_vigilance_report (
+    raw_vigilance_key       BIGSERIAL PRIMARY KEY,
+    source_record_id        VARCHAR(200) NOT NULL,
+    source_system           VARCHAR(50) NOT NULL DEFAULT 'CANADA_VIGILANCE',
+    payload                 JSONB NOT NULL,
+    extracted_at            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    loaded_at               TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uk_raw_canada_vigilance_report UNIQUE (source_system, source_record_id)
+);
+
 CREATE MATERIALIZED VIEW IF NOT EXISTS analytics.mv_device_risk_summary AS
 SELECT
     d.device_key,

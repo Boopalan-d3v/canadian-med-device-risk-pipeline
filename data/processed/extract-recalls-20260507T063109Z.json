@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "href": "/en/alert-recall/cook-medical-beaconr-tip-centimeter-sizing-catheter",
+      "text": "Cook Medical Beacon® Tip Centimeter Sizing Catheter"
+    },
+    {
+      "href": "/en/alert-recall/polysorb-coated-braided-absorbable-single-stitch-reload-use-endo-stitch-and-sils",
+      "text": "Polysorb Coated Braided Absorbable Single Stitch Reload For Use With The Endo Stitch And Sils Stitch Suturing Devices"
+    },
+    {
+      "href": "/en/alert-recall/aesculap-unlicenced-medical-devices",
+      "text": "Aesculap unlicenced medical devices"
+    },
+    {
+      "href": "/en/alert-recall/instinctr-plus-endoscopic-clipping-device",
+      "text": "Instinct® Plus Endoscopic Clipping Device"
+    },
+    {
+      "href": "/en/alert-recall/olympus-medical-pkpkseverest-cutting-forceps",
+      "text": "Olympus Medical PK/PKS/Everest Cutting Forceps"
+    },
+    {
+      "href": "/en/alert-recall/burlington-medical-thyroid-shields-vests-and-kilts",
+      "text": "Burlington Medical Thyroid Shields, Vests, and Kilts"
+    },
+    {
+      "href": "/en/alert-recall/spertitm-vitamin-lamp",
+      "text": "Sperti™ Vitamin D Lamp"
+    },
+    {
+      "href": "/en/alert-recall/medline-convenience-kits-containing-namic-angiographic-manifolds",
+      "text": "Medline convenience kits containing Namic Angiographic Manifolds"
+    },
+    {
+      "href": "/en/alert-recall/hydromarktm-breast-biopsy-site-marker",
+      "text": "HydroMARK™ Breast Biopsy Site Marker"
+    },
+    {
+      "href": "/en/alert-recall/monnaltm-t60-advanced",
+      "text": "Monnal™ T60 Advanced"
+    },
+    {
+      "href": "/en/alert-recall/mosaiq-3",
+      "text": "MOSAIQ"
+    },
+    {
+      "href": "/en/alert-recall/vivo-45-ls",
+      "text": "Vivo 45 LS"
+    },
+    {
+      "href": "/en/alert-recall/jumper-medical-fetal-doppler",
+      "text": "Jumper Medical Fetal Doppler"
+    },
+    {
+      "href": "/en/alert-recall/atlan-a350",
+      "text": "Atlan A350"
+    },
+    {
+      "href": "/en/alert-recall/azurion-and-allura-xper-systems",
+      "text": "Azurion and Allura Xper Systems"
+    }
+  ],
+  "snapshot_path": "D:\\Grassstone\\Projects\\canadian-med-device-risk-pipeline\\data\\raw\\recalls-search-results-20260507T063108Z.json",
+  "postgres": {
+    "database": "canadian_med_device_risk",
+    "schema": "fact/raw",
+    "tables": [
+      "raw.raw_recall_listing",
+      "fact.fact_recall"
+    ],
+    "stored_records": 15,
+    "load_stats": {
+      "records_seen": 15,
+      "unique_records": 15,
+      "inserted_or_updated": 15,
+      "unchanged_skipped": 0,
+      "batch_duplicates_skipped": 0
+    }
+  }
+}
